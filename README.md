@@ -1,10 +1,10 @@
-# mycode (Network Automation with Python)
+# Mycode (Network Automation with Python)
 
 Learning Network Automation using Python. This repository is my initial code and learning objectives.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The below instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment section for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
