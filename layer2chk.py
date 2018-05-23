@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-#
+#Using while, if, elif, and else statement 
 #Written by Homer Walden
-
-
 
 while(True):
    print('What is the L2 network protocol? ')

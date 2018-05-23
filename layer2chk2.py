@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#
+#Using while and if (only) statements
 #Written by Homer Walden
 
 while(True):
