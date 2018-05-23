@@ -1,4 +1,4 @@
-#!/usr/share/env python3
+#!/usr/bin/env python3
 #Create a list and print results
 #Written by Homer Walden
 
