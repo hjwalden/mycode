@@ -4,9 +4,11 @@
 
 loginsuccess=0
 loginfail=0
-keystone_file = open('/home/student/mycode/attemptlogin/keystone.common.wsgi','r')
-keystone_file_lines=keystone_file.readlines()
-for i in range(len(keystone_file_lines)):
+keystone_file = open('/home/student/mycode/attemptlogin/keystone.common.wsgi','r') #create file object for desired file
+keystone_file_lines=keystone_file.readlines() #create a list where each item is a line from the file
+
+#Start for loop
+for i in range(len(keystone_file_lines)): #sets range as total number of lines in original file
     if "- - - - -] Authorization failed" in keystone_file_lines[i]:
         loginfail += 1 # this is the same as loginfail = loginfail + 1
 
