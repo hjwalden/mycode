@@ -8,10 +8,10 @@ import webbrowser
 
 ## Define APOD 
 apodurl = 'https://api.nasa.gov/planetary/apod?'
-mykey = 'yNTkFnib7tRgWDsO2TJe0ZEBVxX3AbSg4uZxM0uy'    ## your key goes in place of DEMO_KEY
+mykey = 'api_key=yNTkFnib7tRgWDsO2TJe0ZEBVxX3AbSg4uZxM0uy'    ## your key goes in place of DEMO_KEY
 
 ## Call the webservice
-apodurlobj = urllib.request.urlopen(apodurl)
+apodurlobj = urllib.request.urlopen(apodurl + mykey)
 
 ## read the file-like object
 apodread = apodurlobj.read()

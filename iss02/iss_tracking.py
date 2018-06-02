@@ -10,13 +10,13 @@ import time
 ## Trace the ISS - earth-orbital space station
 eoss = 'http://api.open-notify.org/iss-now.json'
 
-## Call the webserv
+## Call the webserv/API
 trackiss = urllib.request.urlopen(eoss)
 
 ## put into file object
 ztrack = trackiss.read()
 
-## json 2 python data structure
+## json to python data structure - decode json to translate to python
 result = json.loads(ztrack.decode('utf-8'))
 
 ## display our pythonic data
@@ -50,30 +50,24 @@ iss.setheading(90)
 lon = round(float(lon))
 lat = round(float(lat))
 
+yellowlat = 47.6
+yellowlon = -122.3
 iss.penup()
 iss.goto(lon, lat)
 #turtle.mainloop()
+passiss = 'http://api.open-notify.org/iss-pass.json'
+passiss = passiss + '?lat=' + str(yellowlat) + '&lon=' + str(yellowlon)
+response = urllib.request.urlopen(passiss)
+result = json.loads(response.read().decode('utf-8'))
+print(result) ## uncomment to see the downloaded result
+over = result['response'][1]['risetime']
 
-yellowlat = 47.6
-yellowlon = -122.3
 mylocation = turtle.Turtle()
 mylocation.penup()
 mylocation.color('yellow')
 mylocation.goto(yellowlon, yellowlat)
 mylocation.dot(5)
 mylocation.hideturtle()
-
-
-
-#turtle.mainloop()
-
-passiss = 'http://api.open-notify.org/iss-pass.json'
-passiss = passiss + '?lat=' + str(yellowlat) + '&lon=' + str(yellowlon)
-response = urllib.request.urlopen(passiss)
-result = json.loads(response.read())
-## print(result) ## uncomment to see the downloaded result
-
-over = result['response'][1]['risetime']
-
 style = ('Arial', 6, 'bold')
 mylocation.write(time.ctime(over), font=style)
+turtle.mainloop()
