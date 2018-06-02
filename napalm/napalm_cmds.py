@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 ##Basic NAPALM commands (skeleton)
+##Written by Homer Walden
 
 # import code from NAPALM
 from napalm import get_network_driver

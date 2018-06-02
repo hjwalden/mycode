@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-##Pure JSON
+##Pure JSON and Formatted JSON
 ##Written by Homer Walden
 
 from napalm import get_network_driver
