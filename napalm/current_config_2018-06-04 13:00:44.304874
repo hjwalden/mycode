@@ -1,17 +1,21 @@
-! Command: show running-config
-! device: SW2 (vEOS, EOS-4.17.8M)
+Driver: eos
+
+IP address: 172.16.2.10
+
+Running config: ! Command: show running-config
+! device: SW1 (vEOS, EOS-4.17.8M)
 !
 ! boot system flash:/vEOS-lab.swi
 !
 transceiver qsfp default-mode 4x10G
 !
-hostname SW4
+hostname SW1
 !
 spanning-tree mode mstp
 !
 no aaa root
 !
-username admin role network-admin secret sha512 $6$sMC/OWBcsoVThCYV$HT.2Y/1/ZmK/9xqy86YRbEilxly.4oD6tx4V0HSFxrZYd3cwFW4hop.m5m6N6YdYfWosmo/NMSjnE/zH5FfcN1
+username admin role network-admin secret sha512 $6$tOeJsWu374tiDC4k$ZPHqgmfDfTgV71RcoWpERV1Zq.x4/cPOKKD8.TzxFfPIijtgsbsExwxZY1vY..1y45Mup1ypqy8xQWT/YuZkE.
 !
 interface Ethernet1
 !
@@ -39,7 +43,7 @@ interface Ethernet12
 !
 interface Management1
    mtu 1450
-   ip address 172.16.2.20/24
+   ip address 172.16.2.10/24
 !
 ip route 0.0.0.0/0 172.16.2.100
 !
@@ -51,4 +55,5 @@ management api http-commands
 !
 !
 end
+
 

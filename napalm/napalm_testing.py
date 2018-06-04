@@ -6,7 +6,7 @@
 from napalm import get_network_driver
 
 ##Create a function to automate NAPALM commands
-def eddiebabe(xdriver, yIP, hwuser, hwpswd):
+def hwnapalm(xdriver, yIP, hwuser, hwpswd):
     
     #Tell NAPALM to speak "xdriver" commands to our switches
     driver=get_network_driver(xdriver)
