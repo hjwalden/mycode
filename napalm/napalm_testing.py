@@ -19,13 +19,3 @@ def eddiebabe(xdriver, yIP, hwuser, hwpswd):
 
     #Get device startup and running configs
     return device.get_config()
-
-answer='yes'
-while(answer !='q'):
-    x=input("What driver are we using? ")
-    y=input("What is the IP address? ")
-    u=input("What is the username? ")
-    p=input("What is the password? ")
-    z=eddiebabe(x, y, u, p)
-    print("You told me the driver was " + str(x) + " and the IP address was " + str(y) + " who has a running config of " + str(z))
-    answer=input("go again? q to quit")
