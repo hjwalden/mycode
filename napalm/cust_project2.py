@@ -5,6 +5,8 @@
 ##Import code from NAPALM
 from napalm import get_network_driver
 
+from datetime import datetime
+
 ##Create a function to automate NAPALM commands
 def eddiebabe(xdriver, yIP, hwuser, hwpswd):
     
@@ -27,5 +29,7 @@ while(answer !='q'):
     u=input("What is the username? ")
     p=input("What is the password? ")
     z=eddiebabe(x, y, u, p)
-    print("You told me the driver was " + str(x) + " and the IP address was " + str(y) + " who has a running config of " + str(z))
+    filename="current_config_" + str(datetime.now)
+    hwfile=open(filename, "w")
+    print("You told me the driver was " + str(x) + " and the IP address was " + str(y) + " who has a running config of " + str(z), file=hwfile)
     answer=input("go again? q to quit")
